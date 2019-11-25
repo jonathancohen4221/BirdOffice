@@ -1,0 +1,34 @@
+@font-face {
+    font-family:"CircularStd-Black";
+    src:url("../fonts/CircularStd-Black.woff2") format("woff2"),url("../fonts/CircularStd-Black.woff") format("woff"),url("../fonts/CircularStd-Black.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"CircularStd-Bold";
+    src:url("../fonts/CircularStd-Bold.woff2") format("woff2"),url("../fonts/CircularStd-Bold.woff") format("woff"),url("../fonts/CircularStd-Bold.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"CircularStd-Book";
+    src:url("../fonts/CircularStd-Book.woff2") format("woff2"),url("../fonts/CircularStd-Book.woff") format("woff"),url("../fonts/CircularStd-Book.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"CircularStd-Medium";
+    src:url("../fonts/CircularStd-Medium.woff2") format("woff2"),url("../fonts/CircularStd-Medium.woff") format("woff"),url("../fonts/CircularStd-Medium.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"SanFranciscoText-Semibold";
+    src:url("../fonts/SanFranciscoText-Semibold.woff2") format("woff2"),url("../fonts/SanFranciscoText-Semibold.woff") format("woff"),url("../fonts/SanFranciscoText-Semibold.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+        
+  @font-face {
+    font-family: "SF-UI-Text-Light";
+    src: url('../fonts/SF-UI-Text-Light.eot');
+    src: url('../fonts/SF-UI-Text-Light.eot') format('embedded-opentype'),
+    url('../fonts/SF-UI-Text-Light.woff2') format('woff2'),
+    url('../fonts/SF-UI-Text-Light.woff') format('woff'),
+    url('../fonts/SF-UI-Text-Light.ttf') format('truetype');
+  }
