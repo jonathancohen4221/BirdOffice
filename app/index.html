@@ -37,139 +37,56 @@
   <!--[if IE]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
-  <div id="container">
-    <header>
-      <img class="logo" src="/images/logo.png" srcset="/images/logo@2x.png 2x" alt="logo">
-      <div class="header-right">
-        <span>0</span>
-        <p>shopping cart</p>
-        <img class="cart" src="/images/picto-cart.png" srcset="/images/picto-cart@2x.png 2x" alt="cart">
-      </div>
-    </header>
-    <main>
-      <section>
-        <h1>Just Booked</h1>
-        <ul>
-          <li>
-            <a href="/product.html">
-              <figure>
-                <img src="/images/img-booked1.jpg" srcset="/images/img-booked1@2x.jpg 2x" alt="image booked">
-                <figcaption>
-                  <span>$7956</span>
-                  Step behind the scenes of Havana’s theater
-                </figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <figure>
-                <img src="/images/img-booked2.jpg" srcset="/images/img-booked2@2x.jpg 2x" alt="image booked">
-                <figcaption><span>$7956</span>
-                  Hunt for truffles in the countryside
-                </figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <figure>
-                <img src="/images/img-booked3.jpg" srcset="/images/img-booked3@2x.jpg 2x" alt="image booked">
-                <figcaption>
-                  <span>$13,361</span>
-                  Hunt for truffles in the countryside
-                </figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <figure>
-                <img src="/images/img-booked4.jpg" srcset="/images/img-booked4@2x.jpg 2x" alt="image booked">
-                <figcaption>
-                  <span>$23,204</span>
-                  Meet Kenyan innovators with a Nairobi...</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <figure>
-                <img src="/images/img-booked5.jpg" srcset="/images/img-booked5@2x.jpg 2x" alt="image booked">
-                <figcaption>
-                  <span>$18,232</span>
-                  Explore Miami’s Latin flavors with food...</figcaption>
-              </figure>
-            </a>
-          </li>
-        </ul>
-      </section>
+      <div id="home">
+        <header>
+          <img class="logo" src="/images/logo.png" srcset="/images/logo@2x.png 2x" alt="logo">
+          <div class="header-right">
+            <span>0</span>
+            <p>shopping cart</p>
+            <img class="cart" src="/images/picto-cart.png" srcset="/images/picto-cart@2x.png 2x" alt="cart">
+          </div>
+        </header>
+        <main>
 
-      <section>
+          <section>
+            <h1>Just Booked</h1>
+            <ul>
+              <li v-for="booked in bookeds">
+                <a href="/product.html">
+                  <figure>
+                   <img :src="booked.bookedImage" alt="image">                
+                   <figcaption><span>${{ booked.bookedPrice }}</span>{{ booked.bookedDescription }}</figcaption>
+                 </figure>
+               </a>
+             </li>
+           </ul>
+         </section>
+
+         <section>
           <h1>Featured experiences</h1>
           <ul>
-            <li>
-              <a href="">
+            <li v-for="experience in experiences">
+              <a href="/product.html">
                 <figure>
-                  <img src="/images/img-experience1.jpg" srcset="/images/img-experience1@2x.jpg 2x" alt="image experience">
-                  <figcaption>
-                    <span>$7956</span>
-                    Step behind the scenes of Havana’s theater
-                  </figcaption>
-                </figure>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <figure>
-                  <img src="/images/img-experience2.jpg" srcset="/images/img-experience2@2x.jpg 2x" alt="image experience">
-                  <figcaption><span>$7956</span>
-                    Hunt for truffles in the countryside
-                  </figcaption>
-                </figure>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <figure>
-                  <img src="/images/img-experience3.jpg" srcset="/images/img-experience3@2x.jpg 2x" alt="image experience">
-                  <figcaption>
-                    <span>$13,361</span>
-                    Hunt for truffles in the countryside
-                  </figcaption>
-                </figure>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <figure>
-                  <img src="/images/img-experience4.jpg" srcset="/images/img-experience4@2x.jpg 2x" alt="image experience">
-                  <figcaption>
-                    <span>$23,204</span>
-                    Meet Kenyan innovators with a Nairobi...</figcaption>
-                </figure>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <figure>
-                  <img src="/images/img-experience5.jpg" srcset="/images/img-experience5@2x.jpg 2x" alt="image experience">
-                  <figcaption>
-                    <span>$18,232</span>
-                    Explore Miami’s Latin flavors with food...</figcaption>
-                </figure>
-              </a>
-            </li>
-          </ul>
-        </section>
-    </main>
-  </div>
+                 <img :src="experience.experienceImage" alt="image">                
+                 <figcaption><span>${{ experience.experiencePrice }}</span>{{ experience.experienceDescription }}</figcaption>
+               </figure>
+             </a>
+           </li>
+         </ul>
+       </section>
+     </main>
+   </div>
 
-  <!-- build:js scripts/vendor.js -->
-  <!-- endbuild -->
-  <!-- build:js scripts/main.js -->
-  <script src="scripts/main.js"></script>
-  <!-- endbuild -->
-</body>
+   <!-- build:js scripts/vendor.js -->
+   <!-- endbuild -->
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+   <script src="scripts/home.js"></script>
 
-</html>
+   <!-- build:js scripts/main.js -->
+   <script src="scripts/main.js"></script>
+   <!-- endbuild -->
+ </body>
+
+ </html>
