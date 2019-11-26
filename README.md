@@ -11,5 +11,8 @@ Le projet a été installé avec **[Yeoman](https://yeoman.io/)**, un outil qui 
      
      - **Si SASS ne s'est pas installé sur la machine**: `npm install -g sass`.
  - **Lancer le projet en local avec la commande** : `gulp serve`.
- - **Se mettre sur la branche integration**: `git checkout integration`.
+ - **Au cas où : Se mettre sur la branche master**: `git checkout master`.
  - **Pour mettre en production** : lancer la commande `gulp build` qui va minifier les fichiers javascript et css et compresser les images.
+ 
+  - **Concernant le projet** : Il a été fait en VueJS meme s'il manque quelques features comme le routing. L'incrementation du panier a été faite. Les data sont récupérées en JS.
+
